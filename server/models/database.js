@@ -13,7 +13,9 @@ var Recipe = new Schema(
 mongoose.model('recipes', Recipe);
 
 // mongoose.connect('mongodb://localhost/know-your-food-recipes');
+process.env.DB_HOST = 'mongodb://localhost/node-penguins';
+mongoose.connect(process.env.DB_HOST);
 
-mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/db-name");
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/know-your-food-recipes");
 
 
