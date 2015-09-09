@@ -12,7 +12,8 @@ var Recipe = new Schema(
 
 mongoose.model('recipes', Recipe);
 
-mongoose.connect('mongodb://localhost/know-your-food-recipes');
+// mongoose.connect('mongodb://localhost/know-your-food-recipes');
 
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/db-name");
 
 
